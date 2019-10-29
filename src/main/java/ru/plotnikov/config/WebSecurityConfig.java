@@ -19,6 +19,7 @@ import ru.plotnikov.service.UserDetailsServiceImpl;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Bean
     UserDetailsService getUserDetailsService() {
         return new UserDetailsServiceImpl();
