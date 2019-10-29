@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+
+</div>
+<div class="container">
+    <div class="text-left" th:if="${not #lists.isEmpty(users)}">
+
+        <h1>Singer List</h1>
+
+        <div class="lead">
+            <table class="table table-striped">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <div sec:authorize="hasRole('ROLE_ADMIN')">
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </div>
+                </tr>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.name}">Name</td>
+                    <td th:text="${user.age}">Age</td>
+                    <div sec:authorize="hasRole('ROLE_ADMIN')">
+                        <td>
+                            <a th:href="${'/user?id=' + user.id}"/>Edit</a>
+                        </td>
+                        <td>
+                            <form th:action="@{/admin/delete}" method="post">
+                                <input type="hidden" name="id" th:value="${user.id}"/>
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </div>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+    <button onclick="location.href='/registration'">Add new user</button>
+</div>
+</body>
+</html>

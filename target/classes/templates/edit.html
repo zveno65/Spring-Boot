@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>User</title>
+</head>
+<body>
+<form th:object="${user}" th:action="@{/user}" method="post">
+    <input type="hidden" name="id" th:field="*{id}"/>
+    <input type="hidden" name="password" th:field="*{password}"/>
+    <div><label> Name : <input type="text" name="username" th:field="*{name}"/> </label></div>
+    <div><label> Age: <input type="number" name="age" th:field="*{age}"/> </label></div>
+    <div><input type="submit" value="Edit"/></div>
+</form>
+</body>
+</html>
