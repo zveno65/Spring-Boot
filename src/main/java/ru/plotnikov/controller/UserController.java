@@ -21,7 +21,7 @@ public class UserController {
     UserService userService;
 
     @GetMapping
-    public String editForm(@RequestParam Long id, Model model) {
+    public String editForm(@RequestParam(required = false) Long id, Model model) {
 //        User user = userService.findById(id);
 //        model.addAttribute("user", user);
 //        return "edit";
@@ -39,7 +39,7 @@ public class UserController {
 
         User user = (User) authentication.getPrincipal();
 
-        if (!isAdmin && user.getId()!=Long.valueOf(id)) {
+        if (id==null || !isAdmin && user.getId()!=Long.valueOf(id)) {
             return "redirect:/user?id=" + user.getId();
         }
 

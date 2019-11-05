@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-<head>
-    <title>Sing in</title>
-</head>
-<body>
-<div th:if="${param.error}">
-    Invalid username or password.
-</div>
-<div th:if="${param.logout}">
-    You have been logged out.
-</div>
-Login page
-<form th:action="@{/doLogin}" method="post">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Sign In"/></div>
-</form>
-<a href="/registration">Add new user</a>
-</body>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Sing in</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="C:/Users/Home/Desktop/MySpringBoot/src/main/resources/static/style.css" th:href="@{/static/login.css}" media="screen"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+    </head>
+    <body>
+        <form th:action="@{/doLogin}" method="post" class="form-signin">
+            <div th:if="${param.error}">
+                Invalid username or password.
+            </div>
+            <div th:if="${param.logout}">
+                You have been logged out.
+            </div>
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <div class="form-label-group">
+                <input type="text" id="username-label" name="username" class="form-control" placeholder="User Name" required>
+                <label for="username-label">User name</label>
+            </div>
+
+            <div class="form-label-group">
+                <input type="password" id="password-label" name="password" class="form-control" placeholder="Password" required>
+                <label for="password-label">Password</label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary btn-block" onclick="location.href='/registration'">Registration</button>
+        </form>
+        <script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/1.15.0/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+    </body>
 </html>

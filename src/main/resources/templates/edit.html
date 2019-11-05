@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-<head>
-    <title>User</title>
-</head>
-<body>
-<form th:object="${user}" th:action="@{/user}" method="post">
-    <input type="hidden" name="id" th:field="*{id}"/>
-    <input type="hidden" name="password" th:field="*{password}"/>
-    <div><label> Name : <input type="text" name="username" th:field="*{name}"/> </label></div>
-    <div><label> Age: <input type="number" name="age" th:field="*{age}"/> </label></div>
-    <div><input type="submit" value="Edit"/></div>
-</form>
-</body>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>User</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" th:href="@{/static/main.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+        <style>
+            body {
+                font-size: .875rem;
+                background-color: beige;
+            }
+        </style>
+    </head>
+    <body>
+        <div th:replace="~{fragments/header :: header}">Header</div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 bg-light min-vh-100">
+                    <nav class="nav mt-2 flex-column nav-pills">
+                        <a class="nav-link" th:href="@{/admin}">Admin</a>
+                        <a class="nav-link active" th:href="@{/user}">User</a>
+                    </nav>
+                </div>
+                <div class="col-9 mt-2 ml-sm-auto">
+                    <form th:object="${user}" th:action="@{/user}" method="post">
+                        <input type="hidden" name="id" th:field="*{id}"/>
+                        <input type="hidden" name="password" th:field="*{password}"/>
+                        <div><label> Name : <input type="text" name="username" th:field="*{name}"/> </label></div>
+                        <div><label> Age: <input type="number" name="age" th:field="*{age}"/> </label></div>
+                        <div><input type="submit" value="Edit"/></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/1.15.0/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+    </body>
 </html>

@@ -47,4 +47,5 @@ public class RegistrationController {
         }
         return "redirect:/admin";
     }
+
 }
