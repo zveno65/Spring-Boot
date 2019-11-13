@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
     <head>
         <title>User</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,11 +18,12 @@
             <div class="row">
                 <div class="col-3 bg-light min-vh-100">
                     <nav class="nav mt-2 flex-column nav-pills">
-                        <a class="nav-link" th:href="@{/admin}">Admin</a>
+                        <a sec:authorize="hasRole('ROLE_ADMIN')" class="nav-link" th:href="@{/admin}">Admin</a>
                         <a class="nav-link active" th:href="@{/user}">User</a>
                     </nav>
                 </div>
                 <div class="col-9 mt-2 ml-sm-auto">
+                    <h4 th:object="${user}" th:text="${'Hello, ' + user.name}"/>
                     <form th:object="${user}" th:action="@{/user}" method="post">
                         <input type="hidden" name="id" th:field="*{id}"/>
                         <input type="hidden" name="password" th:field="*{password}"/>

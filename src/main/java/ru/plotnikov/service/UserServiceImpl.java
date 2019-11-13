@@ -8,7 +8,6 @@ import ru.plotnikov.repository.RoleRepository;
 import ru.plotnikov.repository.UserRepository;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -30,6 +29,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findById(Long id) {
         return userRepository.findById(id).get();
+    }
+
+    public User findByName(String name) {
+        return userRepository.findByName(name);
     }
 
     @Override

@@ -22,9 +22,6 @@ public class UserController {
 
     @GetMapping
     public String editForm(@RequestParam(required = false) Long id, Model model) {
-//        User user = userService.findById(id);
-//        model.addAttribute("user", user);
-//        return "edit";
         boolean isAdmin = false;
 
         UsernamePasswordAuthenticationToken authentication = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();

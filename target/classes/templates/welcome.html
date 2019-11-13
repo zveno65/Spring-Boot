@@ -11,7 +11,7 @@
 
 <div class="container mt-5">
     <p th:text="'Hello, ' + ${name} + '!'" />
-    <p th:text="'Welcome to My Spring Boot Program'" />
+    <p><a th:href="@{/user}">Welcome to My Spring Boot Program<a/></p>
 </div>
 <script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
 <script th:src="@{/webjars/popper.js/1.15.0/popper.min.js}"></script>
