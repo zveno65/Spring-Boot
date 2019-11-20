@@ -20,7 +20,7 @@ $(document).ready(
             $.ajax({
                 type : "POST",
                 contentType : "application/json",
-                url : "newRest",
+                url : "rest/newRest",
                 data : JSON.stringify(formData),
                 dataType : 'json',
                 success : function(user) {
@@ -86,7 +86,7 @@ $(document).ready(
                         $.ajax({
                             type : "POST",
                             contentType : "application/json",
-                            url : "editRest",
+                            url : "rest/editRest",
                             data : JSON.stringify(formData),
                             dataType : 'json',
                             success : function (user) {

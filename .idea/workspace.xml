@@ -7,34 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc098c20-9b3d-4c91-bbc1-cacd3561d935" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/controller/rest/EditUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/controller/rest/ListUsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/controller/rest/NewUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/listUsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/newUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/config/CustomUserInfoTokenServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/service/GoogleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/controller/rest/EditUserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/controller/rest/ListUsersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/controller/rest/NewUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/controller/rest/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/plotnikov/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/plotnikov/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/listGroup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/welcome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/plotnikov/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/plotnikov/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/listUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/listUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/newUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/newUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/plotnikov/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/plotnikov/config/WebSecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/plotnikov/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/plotnikov/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/plotnikov/controller/rest/EditUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/plotnikov/controller/rest/ListUsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/plotnikov/controller/rest/NewUserController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/plotnikov/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/plotnikov/service/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/plotnikov/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/plotnikov/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/plotnikov/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/plotnikov/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/listGroup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/listUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/listUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/newUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/newUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -287,7 +283,18 @@
       <workItem from="1573489314779" duration="4323000" />
       <workItem from="1573561359189" duration="25198000" />
       <workItem from="1573645196029" duration="9415000" />
-      <workItem from="1573655114119" duration="3143000" />
+      <workItem from="1573655114119" duration="3749000" />
+      <workItem from="1573730735661" duration="2790000" />
+      <workItem from="1573742866883" duration="2645000" />
+      <workItem from="1573754873508" duration="3303000" />
+      <workItem from="1573813590510" duration="10421000" />
+      <workItem from="1573907621705" duration="3147000" />
+      <workItem from="1573934790470" duration="452000" />
+      <workItem from="1573979806632" duration="4309000" />
+      <workItem from="1574005032667" duration="2988000" />
+      <workItem from="1574079444753" duration="1594000" />
+      <workItem from="1574158787435" duration="11328000" />
+      <workItem from="1574248784617" duration="8094000" />
     </task>
     <servers />
   </component>

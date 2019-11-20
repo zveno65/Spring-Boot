@@ -3,14 +3,9 @@ $(document).ready(
 
 
         $("#newUserId").submit(function(event) {
-            // Prevent the form from submitting via the browser.
             event.preventDefault();
             ajaxPost();
         });
-        
-        // $("#nav-profile-tab").active(function () {
-        //
-        // })
 
 
         function ajaxPost() {
@@ -25,7 +20,7 @@ $(document).ready(
             $.ajax({
                 type : "POST",
                 contentType : "application/json",
-                url : "newRest",
+                url : "rest/newRest",
                 data : JSON.stringify(formData),
                 dataType : 'json',
                 success : function(user) {
@@ -91,7 +86,7 @@ $(document).ready(
                         $.ajax({
                             type : "POST",
                             contentType : "application/json",
-                            url : "editRest",
+                            url : "rest/editRest",
                             data : JSON.stringify(formData),
                             dataType : 'json',
                             success : function (user) {

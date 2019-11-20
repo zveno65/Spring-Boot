@@ -2,7 +2,7 @@ $(document).ready(
     function() {
         $.ajax({
             type: "GET",
-            url: "usersRest",
+            url: "rest/usersRest",
             dataType: "json",
             success: function (result) {
                 $('#getResultDiv').empty();
@@ -76,7 +76,7 @@ $(document).ready(
                             $.ajax({
                                 type : "POST",
                                 contentType : "application/json",
-                                url : "editRest",
+                                url : "rest/editRest",
                                 data : JSON.stringify(formData),
                                 dataType : 'json',
                                 success : function (user) {
@@ -88,10 +88,6 @@ $(document).ready(
                         });
                     });
                 console.log("Success: ", result);
-            },
-            error: function() {
-                $("#getResultDiv").html("<strong>e</strong>");
-                alert(jqXHR.status + ' ' + jqXHR.responseText);
             }
         });
     })

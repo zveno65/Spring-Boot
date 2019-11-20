@@ -1,9 +1,11 @@
 package ru.plotnikov.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.task.DelegatingSecurityContextAsyncTaskExecutor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +25,8 @@ public class UserController {
     @GetMapping
     public String editForm(@RequestParam(required = false) Long id, Model model) {
         boolean isAdmin = false;
-
-        UsernamePasswordAuthenticationToken authentication = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+        AbstractAuthenticationToken authentication = null;
+        authentication = (AbstractAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
         Collection<? extends GrantedAuthority> authorities
                 = authentication.getAuthorities();
         for (GrantedAuthority grantedAuthority : authorities) {
@@ -34,7 +36,13 @@ public class UserController {
             }
         }
 
-        User user = (User) authentication.getPrincipal();
+        User user = null;
+
+        if (authentication instanceof UsernamePasswordAuthenticationToken) {
+            user = (User) authentication.getPrincipal();
+        }
+        else
+            user = userService.findByName((String) authentication.getPrincipal());
 
         if (id==null || !isAdmin && user.getId()!=Long.valueOf(id)) {
             return "redirect:/user?id=" + user.getId();
